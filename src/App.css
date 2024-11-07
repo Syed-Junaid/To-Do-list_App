@@ -1,38 +1,107 @@
-.App {
+/* App.css */
+.app {
   text-align: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"], input[type="date"], textarea {
+  padding: 8px;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  background-color: #2980b9;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-todo-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.add-todo-form input, .add-todo-form textarea {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+.add-todo-form button {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+/* Completed Todo Item Style */
+.todo-item.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Button to mark completed/pending */
+button {
+  padding: 8px 16px;
+  background-color: #3498db;
   color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:focus {
+  outline: none;
+}
+
+.todo-item-buttons {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 10px; /* Adds space between buttons */
+  margin-top: 10px; /* Adds space above the buttons */
+}
+
+.todo-item-buttons button {
+  padding: 5px 10px; /* Adds padding for better appearance */
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item-buttons button:hover {
+  background-color: #45a049; /* Slightly darker green for hover effect */
+}
+
+.todo-item-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.6); /* Adds focus effect */
 }
